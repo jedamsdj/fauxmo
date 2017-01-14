@@ -383,10 +383,8 @@ class rest_api_handler(object):
 # 16 switches it can control. Only the first 16 elements of the FAUXMOS
 # list will be used.
 
-FAUXMOS = [
-    ['office lights', rest_api_handler('http://192.168.5.4/ha-api?cmd=on&a=office', 'http://192.168.5.4/ha-api?cmd=off&a=office')],
-    ['kitchen lights', rest_api_handler('http://192.168.5.4/ha-api?cmd=on&a=kitchen', 'http://192.168.5.4/ha-api?cmd=off&a=kitchen')],
-]
+FAUXMOS = [['Bedroom Light', rest_api_handler('http://10.0.1.4/fauxmo/light.php?cmd=on&a=bedroom',
+                                              'http://10.0.1.4/fauxmo/light.php?cmd=off&a=bedroom')]]
 
 
 if len(sys.argv) > 1 and sys.argv[1] == '-d':
